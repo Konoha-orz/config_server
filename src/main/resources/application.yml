@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: Properties
+          uri: https://github.com/Konoha-orz/Pulingle-Config-Repo
+
+  application:
+    name: config_server
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+  messages:
+    encoding: utf-8
+server:
+  port: 8762
+  tomcat:
+    uri-encoding: UTF-8
+eureka:
+  client:
+    service-url:
+      defaultZone: http://120.78.81.233:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 120.78.81.233
